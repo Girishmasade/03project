@@ -18,6 +18,13 @@ function signuppage() {
     }
   }, [user])
   
+  const handleSubmit = () =>{
+    try {
+      
+    } catch (error) {
+      
+    }
+  }
 
   return (
     <div className="flex bg-green-500 min-h-screen justify-center items-center">
@@ -61,6 +68,7 @@ function signuppage() {
         </div>
 
         <button
+        onClick={handleSubmit}
           className={`${
             disable ? "bg-green-400 cursor-not-allowed" : "bg-green-900"
           } w-full py-1 rounded-lg text-white`}
