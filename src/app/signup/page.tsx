@@ -45,21 +45,24 @@ function signuppage() {
         <h1 className="font-bold text-center text-lg">Signup</h1>
 
         <div className="flex flex-col py-3 ">
-          <label htmlFor="" className="py-1">
+          <label htmlFor="username" className="py-1">
             username
           </label>
           <input
             type="text"
+            autoComplete="off"
             value={user.username}
+            id="username"
             onChange={(e) => setuser({ ...user, username: e.target.value })}
             className="border-2 border-gray-500 py-1 px-2 rounded-lg outline-none"
           />
         </div>
 
         <div className="flex flex-col py-3 ">
-          <label className="py-1">Email</label>
+          <label htmlFor="email" className="py-1">Email</label>
           <input
             type="email"
+            id="email"
             value={user.email}
             autoComplete="off"
             onChange={(e) => setuser({ ...user, email: e.target.value })}
@@ -68,9 +71,11 @@ function signuppage() {
         </div>
 
         <div className="flex flex-col py-3 ">
-          <label className="py-1">Password</label>
+          <label htmlFor="password" className="py-1">Password</label>
           <input
             type="password"
+            id="password"
+            autoComplete="off"
             value={user.password}
             onChange={(e) => setuser({ ...user, password: e.target.value })}
             className="border-2 outline-none border-zinc-600 rounded-md px-2 py-1"
